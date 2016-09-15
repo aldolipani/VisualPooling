@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="javascripts/respond.js"></script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -32,41 +33,47 @@
         <h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Project</h3>
 
-<p></p>
+<p>This project aims on visualizing the pooling strategies developed for the pooling method.</p>
 
 <h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pooling</h3>
 
-<p></p>
+<p><!--The Pooling method, also called pooling, consists on gathering the result --></p>
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pooling Strategies</h3>
 
-<p></p>
+<p>The pooling strategy visualized are:</p>
+<ul>
+  <li>Take@N</li>
+  <li>RBPBasedA@N&p</li>
+  <li>RBPBasedB@N&p</li>
+  <li>RBPBasedC@N&p</li>
+</ul>
 
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Take@N</h4>
 
-<p></p>
-<img src="images/TakeN.gif" alt="Take@N Strategy" style="width: 80%; height: 80%" onclick='this.src=this.src'/>
+<p>This strategy is the most commonly adopted in practice if a fixed pool size is required (e.g., due to budget constraints) and is based on the rank at which documents have been retrieved. It starts assigning to every retrieved document $d$ the highest rank $\rho$ to which $d$ has been retrieved by $R_p$, then it continues taking the first $N$ documents with the highest $\rho$ and pools them. The main drawback of this strategy with respect to $Depth@k$ is that it does not guarantee fairness among all the pooled runs. In $Depth@k$ all the runs contribute equally to the pool with their first $k$ documents, here some runs can get more judged documents than others.</p>
+<img src="images/TakeN.gif" alt="Take@N Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RBPBasedA@N&amp;p</h4>
 
 <p></p>
-<img src="images/RBPA.gif" alt="RBPBasedA@N&amp;p Strategy" style="width: 80%; height: 80%" onclick='this.src=this.src'/>
+<img src="images/RBPA.gif" alt="RBPBasedA@N&amp;p Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RBPBasedB@N&amp;p</h4>
 
 <p></p>
-<img src="images/RBPB.gif" alt="RBPBasedB@N&amp;p Strategy" style="width: 80%; height: 80%" onclick='this.src=this.src'/>
+<img src="images/RBPB.gif" alt="RBPBasedB@N&amp;p Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RBPBasedC@N&amp;p</h4>
 
 <p></p>
-<img src="images/RBPC.gif" alt="RBPBasedC@N&amp;p Strategy" style="width: 80%; height: 80%" onclick='this.src=this.src'/>
+<img src="images/RBPC.gif" alt="RBPBasedC@N&amp;p Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>

@@ -56,9 +56,13 @@
   <li>RBPBasedC@N&amp;p</li>
 </ul>
 
+<p>Following the legend of the animations</p>
+<p><img src="images/Legend.png" alt="Legend" style="width: 200px" onclick='this.src=this.src'/></p>
+<p></p>
+
 <h4>Take@N</h4>
 <p>This strategy is the most commonly adopted in practice if a fixed pool size is required (e.g., due to budget constraints) and is based on the rank at which documents have been retrieved. It starts assigning to every retrieved document $d$ the highest rank $\rho$ to which $d$ has been retrieved by $R_p$, then it continues taking the first $N$ documents with the highest $\rho$ and pools them. The main drawback of this strategy with respect to $Depth@k$ is that it does not guarantee fairness among all the pooled runs. In $Depth@k$ all the runs contribute equally to the pool with their first $k$ documents, here some runs can get more judged documents than others.</p>
-<p></p><img src="images/TakeN.gif" alt="Take@N Strategy" style="width: 400px" onclick='this.src=this.src'/></p>
+<p><img src="images/TakeN.gif" alt="Take@N Strategy" style="width: 400px" onclick='this.src=this.src'/></p>
 <p></p>
 
 <h4>RBPBasedA@N&amp;p</h4>

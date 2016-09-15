@@ -65,7 +65,15 @@
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RBPBasedA@N&amp;p</h4>
 
-<p></p>
+<p>To every retrieved $d$ in every pooled run $r \in R_p$ is associated a score equal to the RBP residual, in Eq.~\eqref{eq:rbp_w}, which is a function of the rank $\rho$ to which $d$ has been retrieved in $r$ and a parameter $p$, fixed in advance:</p>
+<p style="text-align:center">
+c_{r,d} = (1-p)p^{\rho(r,d)-1}
+</p>
+<p>Then, a weight is assigned to every retrieved $d$, which is calculated by summing up all the scores obtained in the pooled runs $R_p$, as follows:</p>
+<p style="text-align:center">
+w_d = \sum_{r \in R_p}{c_{r,d}}
+</p>
+<p>Finally, the first $N$ documents with highest weight are included in the pool. This strategy rewards documents that have been retrieved by multiple runs at high ranks, but it has the drawback of leaving runs' residuals free (unconstrained), which may be undesirable.</p>
 <img src="images/RBPA.gif" alt="RBPBasedA@N&amp;p Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h4>

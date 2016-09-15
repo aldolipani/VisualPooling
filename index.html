@@ -79,13 +79,21 @@ $w_d = \sum_{r \in R_p}{c_{r,d}}$
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RBPBasedB@N&amp;p</h4>
 
-<p></p>
+<p>Like strategy $A$, but the weighting function is calculated by multiplying the RBP gain-based score with the current residual of $r$ from which $d$ comes:</p>
+<p style="text-align:center">
+$w_d = \sum_{r \in R_p}{c_{r,d} \cdot e_r}$
+</p>
+<p>This pooling strategy, with respect to the others, adapts the weights $w_d$ at every pooled document, due to the inclusion in the weighing schema of the residuals, which are in function of the current set of judged documents. This strategy is characterized by $N$ sequential re-weighting stages in which at each stage the document with the highest $w_d$ is pooled. It is worth mentioning that the re-weighting is independent of the actual judgment of the document.</p>
 <img src="images/RBPB.gif" alt="RBPBasedB@N&amp;p Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h4>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RBPBasedC@N&amp;p</h4>
 
-<p></p>
+<p>Like strategy $B$, but the weighting function is calculated taking into account also the current RBP score of the run $r$:</p>
+<p style="text-align:center">
+$w_d = \sum_{r \in R_p}{c_{r,d} \cdot e_r \cdot (b_r + e_r/2)^3}$
+</p>
+<p>This strategy rewards the runs that have retrieved more relevant documents.</p>
 <img src="images/RBPC.gif" alt="RBPBasedC@N&amp;p Strategy" style="width: 75%; height: 75%" onclick='this.src=this.src'/>
 
 <h3>
